@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 60vh;
+}
+
+.game {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #808000;
+    border-radius: 30px;
+    width: 250px;
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
