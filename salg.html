@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Market</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Escape Market</h1>
+        <p>Unlock new adventures! Køb, sælg eller byt brugte escape room spil.</p>
+        <nav class="navigation">
+            <a href="index.html">Forside</a>
+            <a href="salg.html">Salg</a>
+            <a href="about.html">Om os</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Vil du sælge et spil?</h2>
+        <p>Hvis du har et brugt escape room spil,
+            som du gerne vil sælge,
+            kan du udfylde formularen nedenfor.
+            Vi vil derefter kontakte dig med et bud på dit spil.
+        </p>
+        <p>
+            Det er også muligt at bytte spillet med et andet,
+            såfremt de to spil er i lige god stand.
+        </p>
+
+        <form>
+            <fieldset>
+                <legend>Oplysninger om spillet</legend>
+                <label for="game-name">Spilnavn*:</label><br>
+                <input type="text" id="game-name" name="game-name" required><br><br>
+
+                <label for="condition">Stand*:</label><br>
+                <select id="condition" name="condition" required>
+                    <option value="">Vælg stand</option>
+                    <option value="unopened">Uåbnet</option>
+                    <option value="new">Som ny</option>
+                    <option value="good">God, men brugt</option>
+                    <option value="reparation">Kræver reparation</option>
+                </select><br><br>
+
+                <label for="all-items">Er alle elementer til stede?*:</label><br>
+                <select id="all-items" name="all-items" required>
+                    <option value="">Vælg</option>
+                    <option value="yes">Ja</option>
+                    <option value="no">Nej</option>
+                </select><br><br>
+
+                <label for="times-played">Antal gange spillet*:</label><br>
+                <input type="number" id="times-played" name="times-played" min="0" required><br><br>
+
+                <label for="additional-info">Evt. beskrivelse af stand og defekter:</label><br>
+                <textarea id="additional-info" name="additional-info" rows="4" cols="50"></textarea><br><br>
+
+                <label for="image">Vedhæft billeder af spillet og eventuelle defekter:</label><br>
+                <input type="file" id="image" name="image" multiple accept="image/*" required><br><br>
+
+                <label for="trade">Vil du bytte spillet med et andet?</label><br>
+                <input type="checkbox" id="trade" name="trade" value="yes">
+                <label for="trade">Jeg vil gerne bytte spillet</label><br><br>
+                <label for="trade-details">Hvis ja, hvilket? (angiv trading ID):</label><br>
+                <input type="text" id="trade-details" name="trade-details"><br><br>
+                <label for="price">Købspris:</label><br>
+                <input type="number" id="price" name="price" min="0"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kontaktinformationer</legend>
+                <label for="name">Navn*:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">E-mail*:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="phone">Telefonnummer:</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+            </fieldset>
+
+
+            <p>* Obligatoriske felter</p>
+            <input type="submit" value="Indsend">
+        </form>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 Escape Market</p>
+    </footer>
+
+</body>
+
+</html>
