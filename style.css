@@ -20,7 +20,7 @@ body {
     }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
@@ -28,20 +28,26 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.game {
-    padding: 20px;
-    background-color: #e7ebd9;
-    border: 1px solid #585814;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 200px;
-}
-
 .game-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.game {
+    padding: 20px;
+    background-color: #d4cfb7;
+    border: 0px solid #e6e6b4;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 22px;
+    color: #c07e7e;
 }
 
 /*@media (min-width: 600px) {
