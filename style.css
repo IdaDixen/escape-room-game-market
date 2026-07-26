@@ -17,7 +17,13 @@ body {
         color: #ffffff;
         font-weight: bold;
         font-size: 20px;
+        border-right: 2px solid whitesmoke;
+        padding-right: 20px;
     }
+
+.navigation a:last-child {
+    border-right: none;
+}
 
 main {
     max-width: 1200px;
@@ -26,6 +32,22 @@ main {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.indhold {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site {
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
 }
 
 .game-list {

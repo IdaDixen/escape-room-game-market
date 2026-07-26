@@ -1,4 +1,3 @@
-
 function createGameAd(game) {
     let element = document.createElement("div");
     element.classList.add("game");
