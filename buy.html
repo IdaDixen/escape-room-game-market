@@ -22,10 +22,41 @@
 
     <main>
         <h2 id="used-games">Brugte spil</h2>
+
+        <section class="filter-section">
+            <article class="dropdown-filters">
+                <div class="dropdown">
+                    <button class="dropdown__select" aria-haspopup="listbox" aria-expanded="true">
+                        <span class="dropdown__select-label">Sprog</span>
+                    </button>
+                    <nav class="dropdown__container" role="listbox">
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item">
+                                <label for="check" class="dropdown__checkbox">
+                                    <input type="checkbox" value="Dansk">
+                                    <span class="dropdown__checkbox-label">
+                                        Dansk
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="dropdown__list-item">
+                                <label for="check" class="dropdown__checkbox">
+                                    <input type="checkbox" value="Engelsk">
+                                    <span class="dropdown__checkbox-label">
+                                        Engelsk
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </article>
+        </section>
         
-        <div class="game-list">
-        </div>
-        
+        <section>
+            <div class="game-list">
+            </div>
+        </section>
     </main>
     
     <footer>
