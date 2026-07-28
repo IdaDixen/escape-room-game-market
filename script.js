@@ -64,7 +64,7 @@ function sortGames(games) {
 // Temporary game data
 const games = [
     {
-        title: "Unlock 1! Escape adventures (Dansk)",
+        title: "Unlock! 1 - Escape adventures (Dansk)",
         language: "Dansk",
         price: 120,
         condition: "Som ny",
@@ -73,7 +73,7 @@ const games = [
         id: "1"
     },
     {
-        title: "Exit The Game 13: Bortført i Fortune city",
+        title: "Exit The Game 13 - Bortført i Fortune city",
         language: "Dansk",
         price: 60,
         condition: "God, men brugt",
@@ -91,7 +91,7 @@ const games = [
         id: "3"
     },
     {
-        title: "Unlock 11! Extraordinary adventures",
+        title: "Unlock! 11 - Extraordinary adventures",
         language: "Engelsk",
         price: 120,
         condition: "Som ny",
@@ -101,7 +101,7 @@ const games = [
     },
     {
         title: "Unlock! Fantastiske eventyr",
-        language: "Engelsk",
+        language: "Dansk",
         price: 120,
         condition: "Som ny",
         timesPlayed: 1,

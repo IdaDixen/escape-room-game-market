@@ -5,6 +5,8 @@ body {
 }
  nav {
     display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
     background-color: #025c4d62;
     padding: 10px;
     gap: 20px;
