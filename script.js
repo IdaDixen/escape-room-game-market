@@ -18,22 +18,44 @@ function renderGames(games) {
         let ad = createGameAd(game);
         gameAds.appendChild(ad);
     });
-}   
+}
 
 function filterGames(games) {
-/*     const languageFilter = document.getElementById("language-filter").value;
-    const conditionFilter = document.getElementById("condition-filter").value;
-    const priceFilter = document.getElementById("price-filter").value;
- */
-    const languageFilter = null;//"Dansk";
-    const conditionFilter = null;
-    const priceFilter = null;//100;
+    const languageFilter = document.getElementById("language-filter").value || null;
+    const conditionFilter = document.getElementById("condition-filter").value || null;
+    const priceFilter = document.getElementById("price-filter").value || null;
+    const searchFilter = document.getElementById("search-filter").value;
 
-    const filteredGames = games.filter(game => languageFilter != null? game.language === languageFilter: true)
-                                .filter(game => conditionFilter != null? game.condition === conditionFilter: true)
-                                .filter(game => priceFilter != null? game.price <= priceFilter: true)
+    const filteredGames = games.filter(game => languageFilter != null ? game.language === languageFilter : true)
+        .filter(game => conditionFilter != null ? game.condition === conditionFilter : true)
+        .filter(game => priceFilter != null ? game.price <= priceFilter : true)
+        .filter(game => game.title.toLowerCase().includes(searchFilter.toLowerCase()))
 
     return filteredGames
+}
+
+function sortGames(games) {
+    const sortFilter = document.getElementById("sort-filter").value
+    let sortedGames = [...games]
+
+    switch (sortFilter) {
+        case "price-asc":
+            sortedGames.sort((a, b) => a.price - b.price);
+            break;
+        case "price-desc":
+            sortedGames.sort((a, b) => b.price - a.price);
+            break;
+        case "title-asc":
+            sortedGames.sort((a, b) => a.title.localeCompare(b.title));
+            break;
+        case "title-desc":
+            sortedGames.sort((a, b) => b.title.localeCompare(a.title));
+            break;
+        default:
+            break;
+    }
+
+    return sortedGames
 }
 
 const games = [
@@ -72,5 +94,11 @@ const games = [
 ];
 
 const filteredGames = filterGames(games)
+const sortedGames = sortGames(filteredGames)
+renderGames(sortedGames);
 
-renderGames(filteredGames);
+document.querySelector(".filters").addEventListener("change", function () {
+    const filteredGames = filterGames(games)
+    const sortedGames = sortGames(filteredGames)
+    renderGames(sortedGames);
+});

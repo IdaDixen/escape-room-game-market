@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Market</title>
 </head>
+
 <body>
 
-    <header> 
+    <header>
         <h1>Escape Market</h1>
         <p>Unlock new adventures! Køb, sælg eller byt brugte escape room spil.</p>
         <nav class="navigation">
@@ -23,42 +24,50 @@
     <main>
         <h2 id="used-games">Brugte spil</h2>
 
-        <section class="filter-section">
-            <article class="dropdown-filters">
-                <div class="dropdown">
-                    <button class="dropdown__select" aria-haspopup="listbox" aria-expanded="true">
-                        <span class="dropdown__select-label">Sprog</span>
-                    </button>
-                    <nav class="dropdown__container" role="listbox">
-                        <ul class="dropdown__list">
-                            <li class="dropdown__list-item">
-                                <label for="check" class="dropdown__checkbox">
-                                    <input type="checkbox" value="Dansk">
-                                    <span class="dropdown__checkbox-label">
-                                        Dansk
-                                    </span>
-                                </label>
-                            </li>
-                            <li class="dropdown__list-item">
-                                <label for="check" class="dropdown__checkbox">
-                                    <input type="checkbox" value="Engelsk">
-                                    <span class="dropdown__checkbox-label">
-                                        Engelsk
-                                    </span>
-                                </label>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </article>
-        </section>
-        
-        <section>
-            <div class="game-list">
+        <div class="filters">
+            <div class="filter">
+                <label for="language-filter">Sprog</label>
+                <select id="language-filter">
+                    <option value="">Alle</option>
+                    <option value="Dansk">Dansk</option>
+                    <option value="Engelsk">Engelsk</option>
+                </select>
             </div>
-        </section>
+            <div class="filter">
+                <label for="condition-filter">Stand</label>
+                <select id="condition-filter">
+                    <option value="">Alle</option>
+                    <option value="Uåbnet">Uåbnet</option>
+                    <option value="Som ny">Som ny</option>
+                    <option value="God, men brugt">God, men brugt</option>
+                    <option value="Kræver reperation">Kræver reperation</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="price-filter">Pris</label>
+                <input type="number" id="price-filter" min="0" placeholder="Maks. pris i kr."></input>
+            </div>
+            <div class="filter">
+                <label for="search-filter">Søg efter spil</label>
+                <input type="text" id="search-filter" placeholder="F.eks. Unlock"></input>
+            </div>
+            <div class="filter">
+                <label for="sort-filter">Sortér efter</label>
+                <select id="sort-filter">
+                    <option value="">Standard</option>
+                    <option value="price-asc">Pris: Lav til høj</option>
+                    <option value="price-desc">Pris: Høj til lav</option>
+                    <option value="title-asc">Spil: A til Å</option>
+                    <option value="title-desc">Pris: Å til A</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="game-list">
+        </div>
+
     </main>
-    
+
     <footer>
         <p>© 2026 Escape Market</p>
     </footer>
