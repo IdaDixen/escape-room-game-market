@@ -1,3 +1,28 @@
+// Link database
+const supabaseUrl = "https://uzqxwqlmqyfsjjayeptc.supabase.co";
+const supabaseKey = "sb_publishable_j3_5xVK9QJfBzeQhTB70Og_kBS91v_f";
+
+const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+// test database connection
+console.log(supabaseClient);
+
+// get game data from database
+async function getGames() {
+    const { data, error } = await supabaseClient
+        .from("games")
+        .select("*");
+
+    if (error) {
+        console.error(error);
+        return [];
+    }
+
+    return data;
+}
+
+
+// Create game ad
 function createGameAd(game) {
     let element = document.createElement("a");
     element.classList.add("game");
@@ -13,6 +38,7 @@ function createGameAd(game) {
     return element;
 }
 
+// list all game ads
 function renderGames(games) {
     const gameAds = document.querySelector(".game-list");
     gameAds.innerHTML = "";
@@ -22,6 +48,7 @@ function renderGames(games) {
     });
 }
 
+// filter game list
 function filterGames(games) {
     const languageFilter = document.getElementById("language-filter").value || null;
     const conditionFilter = document.getElementById("condition-filter").value || null;
@@ -33,9 +60,10 @@ function filterGames(games) {
         .filter(game => priceFilter != null ? game.price <= priceFilter : true)
         .filter(game => game.title.toLowerCase().includes(searchFilter.toLowerCase()))
 
-    return filteredGames
+    return filteredGames;
 }
 
+// sort game list
 function sortGames(games) {
     const sortFilter = document.getElementById("sort-filter").value
     let sortedGames = [...games]
@@ -57,84 +85,46 @@ function sortGames(games) {
             break;
     }
 
-    return sortedGames
+    return sortedGames;
 }
 
 
-// Temporary game data
-const games = [
-    {
-        title: "Unlock! 1 - Escape adventures (Dansk)",
-        language: "Dansk",
-        price: 120,
-        condition: "Som ny",
-        timesPlayed: 1,
-        imageUrl: "images/Unlock1-escape-adventures-dansk.jpg",
-        id: "1"
-    },
-    {
-        title: "Exit The Game 13 - Bortført i Fortune city",
-        language: "Dansk",
-        price: 60,
-        condition: "God, men brugt",
-        timesPlayed: 1,
-        imageUrl: "images/exit13-bortført-i-fortune-city.jpg",
-        id: "2"
-    },
-    {
-        title: "Escape Room Spillet 2",
-        language: "Dansk",
-        price: 50,
-        condition: "Kræver reperation",
-        timesPlayed: 1,
-        imageUrl: "images/escape-room-spillet-2.jpg",
-        id: "3"
-    },
-    {
-        title: "Unlock! 11 - Extraordinary adventures",
-        language: "Engelsk",
-        price: 120,
-        condition: "Som ny",
-        timesPlayed: 1,
-        imageUrl: "images/Unlock11-extraordinary-adventures.jpg",
-        id: "4"
-    },
-    {
-        title: "Unlock! Fantastiske eventyr",
-        language: "Dansk",
-        price: 120,
-        condition: "Som ny",
-        timesPlayed: 1,
-        imageUrl: "images/Unlock-fantastiske-eventyr-dansk.jpg",
-        id: "5"
-    }
-];
-
 // If there is a game-list class, then create game-list and update on filters and sort selections
 if (document.querySelector(".game-list")) {
-    const filteredGames = filterGames(games)
-    const sortedGames = sortGames(filteredGames)
-    renderGames(sortedGames);
+    async function showGames() {
+        const games = await getGames();
 
-    document.querySelector(".filters").addEventListener("change", function () {
         const filteredGames = filterGames(games)
         const sortedGames = sortGames(filteredGames)
         renderGames(sortedGames);
-    });
+
+        document.querySelector(".filters").addEventListener("change", function () {
+            const filteredGames = filterGames(games)
+            const sortedGames = sortGames(filteredGames)
+            renderGames(sortedGames);
+        });
+    }
+
+    showGames();
 }
 
 // Search for game ad ID, to open the correct game ad on game.html
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
+// Creat content on game.html?id= page
 if (id != null) {
-    const game = games.find(game => game.id === id);
-    const main = document.querySelector("main")
-    let element = document.createElement("div");
-    element.classList.add("game");
-    main.appendChild(element);
-    
-    element.innerHTML = `
+    async function showGame() {
+        const games = await getGames();
+
+        const game = games.find(game => game.id == id);
+
+        const main = document.querySelector("main")
+        let element = document.createElement("div");
+        element.classList.add("game");
+        main.appendChild(element);
+
+        element.innerHTML = `
         <h2>${game.title}</h2>
         <img src="${game.imageUrl}">
         <p>Sprog: ${game.language}</p>
@@ -142,4 +132,7 @@ if (id != null) {
         <p>Antal gange spillet: ${game.timesPlayed}</p>
         <p class="price">${game.price} kr.</p>
     `;
+    }
+
+    showGame();
 }
