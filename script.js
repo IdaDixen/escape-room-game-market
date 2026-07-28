@@ -1,7 +1,9 @@
 function createGameAd(game) {
-    let element = document.createElement("div");
+    let element = document.createElement("a");
     element.classList.add("game");
+    element.href = `game.html?id=${game.id}`
     element.innerHTML = `
+        <img src="${game.imageUrl}">
         <h3>${game.title}</h3>
         <p>Sprog: ${game.language}</p>
         <p>Stand: ${game.condition}</p>
@@ -58,47 +60,86 @@ function sortGames(games) {
     return sortedGames
 }
 
+
+// Temporary game data
 const games = [
     {
-        title: "Unlock 2",
+        title: "Unlock 1! Escape adventures (Dansk)",
+        language: "Dansk",
+        price: 120,
+        condition: "Som ny",
+        timesPlayed: 1,
+        imageUrl: "images/Unlock1-escape-adventures-dansk.jpg",
+        id: "1"
+    },
+    {
+        title: "Exit The Game 13: Bortført i Fortune city",
+        language: "Dansk",
+        price: 60,
+        condition: "God, men brugt",
+        timesPlayed: 1,
+        imageUrl: "images/exit13-bortført-i-fortune-city.jpg",
+        id: "2"
+    },
+    {
+        title: "Escape Room Spillet 2",
+        language: "Dansk",
+        price: 50,
+        condition: "Kræver reperation",
+        timesPlayed: 1,
+        imageUrl: "images/escape-room-spillet-2.jpg",
+        id: "3"
+    },
+    {
+        title: "Unlock 11! Extraordinary adventures",
         language: "Engelsk",
         price: 120,
         condition: "Som ny",
-        timesPlayed: 5
-        // imageUrl: "images/escape-room-the-game.jpg"
+        timesPlayed: 1,
+        imageUrl: "images/Unlock11-extraordinary-adventures.jpg",
+        id: "4"
     },
     {
-        title: "Exit: The Game",
-        language: "Dansk",
-        price: 80,
-        condition: "God, men brugt",
-        timesPlayed: 1
-        // imageUrl: "images/exit-the-game.jpg"
-    },
-    {
-        title: "Escape Room: The Game 2",
-        language: "Dansk",
-        price: 150,
-        condition: "Uåbnet",
-        timesPlayed: 0
-        // imageUrl: "images/escape-room-the-game.jpg"
-    },
-    {
-        title: "Deckscape: Test Time",
+        title: "Unlock! Fantastiske eventyr",
         language: "Engelsk",
-        price: 100,
-        condition: "God, men brugt",
-        timesPlayed: 3
-        // imageUrl: "images/deckscape-test-time.jpg"
+        price: 120,
+        condition: "Som ny",
+        timesPlayed: 1,
+        imageUrl: "images/Unlock-fantastiske-eventyr-dansk.jpg",
+        id: "5"
     }
 ];
 
-const filteredGames = filterGames(games)
-const sortedGames = sortGames(filteredGames)
-renderGames(sortedGames);
-
-document.querySelector(".filters").addEventListener("change", function () {
+// If there is a game-list class, then create game-list and update on filters and sort selections
+if (document.querySelector(".game-list")) {
     const filteredGames = filterGames(games)
     const sortedGames = sortGames(filteredGames)
     renderGames(sortedGames);
-});
+
+    document.querySelector(".filters").addEventListener("change", function () {
+        const filteredGames = filterGames(games)
+        const sortedGames = sortGames(filteredGames)
+        renderGames(sortedGames);
+    });
+}
+
+// Search for game ad ID, to open the correct game ad on game.html
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if (id != null) {
+    const game = games.find(game => game.id === id);
+    const main = document.querySelector("main")
+    let element = document.createElement("div");
+    element.classList.add("game");
+    main.appendChild(element);
+    
+    element.innerHTML = `
+        <h2>${game.title}</h2>
+        <img src="${game.imageUrl}">
+        <p>Sprog: ${game.language}</p>
+        <p>Stand: ${game.condition}</p>
+        <p>Antal gange spillet: ${game.timesPlayed}</p>
+        <p class="price">${game.price} kr.</p>
+    `;
+}
