@@ -188,7 +188,7 @@ a {
   align-items: stretch;
   padding-left: 10px;
   overflow-x: auto;
-  background: var(--green-300);
+  background: var(--green-600);
   box-shadow: 0 1px 3px rgba(25, 52, 47, 0.14);
 }
 
@@ -365,6 +365,10 @@ h1 {
 .field label span,
 .form-section legend span[aria-hidden="true"] {
   color: var(--numbers);
+}
+
+.field label span {
+  color: var(--error);
 }
 
 .field input,
