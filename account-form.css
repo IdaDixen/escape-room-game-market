@@ -1,6 +1,6 @@
 :root {
   --green-700: #315f57;
-  --green-600: #477b72;
+  --green-600: #1e4741;
   --green-300: #91b6ae;
   --green-100: #e8f1ef;
   --ink: #202725;
@@ -188,7 +188,7 @@ a {
   align-items: stretch;
   padding-left: 10px;
   overflow-x: auto;
-  background: var(--green-600);
+  background: var(--green-700);
   box-shadow: 0 1px 3px rgba(25, 52, 47, 0.14);
 }
 
