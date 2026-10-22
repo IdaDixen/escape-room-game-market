@@ -11,6 +11,7 @@
   --error: #a12d2d;
   --error-soft: #fff1f1;
   --focus: #f2b84b;
+  --numbers: #ffffff;
   --shadow: 0 3px 10px rgba(34, 48, 44, 0.14);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
@@ -363,7 +364,7 @@ h1 {
 
 .field label span,
 .form-section legend span[aria-hidden="true"] {
-  color: var(--error);
+  color: var(--numbers);
 }
 
 .field input,
