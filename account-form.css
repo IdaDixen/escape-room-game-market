@@ -780,6 +780,7 @@ h1 {
   }
 
   .file-input {
+    flex-wrap: wrap;
     width: min(250px, 100%);
   }
 }
