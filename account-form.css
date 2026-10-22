@@ -4,7 +4,7 @@
   --green-300: #91b6ae;
   --green-100: #e8f1ef;
   --ink: #202725;
-  --muted: #586561;
+  --muted: #1b3d33;
   --line: #c9d2cf;
   --surface: #ffffff;
   --canvas: #f3f5f4;
@@ -301,8 +301,8 @@ h1 {
 
 .form-section {
   padding: 10px;
-  margin: 0;
-  border: 0;
+  margin: 10px;
+  border: 20px;
   border-bottom: 1px solid #e2e7e5;
 }
 
@@ -568,21 +568,76 @@ h1 {
   font-size: 9px;
 }
 
-.swatches {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.color-group {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-.swatch {
-  display: grid;
-  width: 31px;
-  height: 31px;
-  place-items: center;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px #929e9a;
+.color-group legend {
+  display: block;
+  margin-bottom: 10px;
+  color: #303633;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.color-picker-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+  padding: 12px;
+  background: #f4f8f7;
+  border: 1px solid #c9d2cf;
+  border-radius: 6px;
+}
+
+.color-picker-control input[type="color"] {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  padding: 4px;
+  background: #ffffff;
+  border: 1px solid #aebbb7;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+.color-picker-control input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-picker-control input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 5px;
+}
+
+.color-picker-control input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 5px;
+}
+
+.color-picker-control input[type="color"]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.color-picker-info label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.color-picker-info small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
 }
 
 .swatch input {
@@ -597,26 +652,6 @@ h1 {
   box-shadow:
     0 0 0 2px #fff,
     0 0 0 4px var(--ink);
-}
-
-.swatch-green {
-  background: #1f8a70;
-}
-
-.swatch-orange {
-  background: #c95832;
-}
-
-.swatch-purple {
-  background: #6c4cc9;
-}
-
-.swatch-yellow {
-  background: #a87913;
-}
-
-.swatch-pink {
-  background: #c53c63;
 }
 
 .check-options {
