@@ -54,6 +54,39 @@
             <a href="/about.html">Om</a>
           </nav>
 
+          <!--
+                <nav class="main-nav" aria-label="Primær navigation">
+                -->
+          <!-- Navigation til større skærme -->
+           <!--
+          <div class="nav-links nav-links-desktop">
+            <a href="/">Forside</a>
+            <a href="/buy.html">Køb brugte spil</a>
+            <a href="/sell.html">Sælg</a>
+            <a href="/trade.html">Byttecentralen</a>
+            <a class="active" href="/account-form.html" aria-current="page">Opret profil</a>
+            <a href="/about.html">Om</a>
+          </div>
+          -->
+
+          <!-- Samme links i en dropdown på små skærme -->
+           <!--
+          <details class="nav-menu nav-menu-mobile">
+            <summary aria-label="Åbn eller luk navigation">
+              Menu <span aria-hidden="true">▾</span>
+            </summary>
+            <div class="nav-links nav-links-dropdown">
+              <a href="/">Forside</a>
+              <a href="/buy.html">Køb brugte spil</a>
+              <a href="/sell.html">Sælg</a>
+              <a href="/trade.html">Byttecentralen</a>
+              <a class="active" href="/account-form.html" aria-current="page">Opret profil</a>
+              <a href="/about.html">Om</a>
+            </div>
+          </details>
+        </nav>
+        -->
+
         <main class="page-shell">
           <section class="profile-card" aria-labelledby="page-title">
             <header class="hero">
@@ -326,7 +359,7 @@
                   <div class="range-group">
                     <label for="radius">Søgeradius</label>
                     <p id="radius-help">
-                      Hvor langt vil du rejse for at spille?
+                      Hvor langt vil du rejse for at bytte spil?
                     </p>
                     <input
                       id="radius"
@@ -344,6 +377,9 @@
                       aria-hidden="true"
                     >
                       <span>5 km</span>
+                      <span>25 km</span>
+                      <span>50 km</span>
+                      <span>75 km</span>
                       <span>100 km</span>
                     </div>
                   </div>
