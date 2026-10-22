@@ -206,7 +206,7 @@ a {
 
 .main-nav a:hover,
 .main-nav a.active {
-  background: var(--green-700);
+  background: var(--green-600);
 }
 
 .page-shell {
