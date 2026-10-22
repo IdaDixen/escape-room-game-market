@@ -39,12 +39,11 @@
             <span>
               Ordblindevenlig tekst
               <small id="reading-mode-description"
-                >Skifter til en enklere skrifttype</small
-              >
+                >Skifter til en enklere skrifttype</small>
             </span>
           </label>
         </header>
-                  <nav class="main-nav" aria-label="Primær navigation">
+        <nav class="main-nav" aria-label="Primær navigation">
             <a href="/">Forside</a>
             <a href="/buy.html">Køb brugte spil</a>
             <a href="/sell.html">Sælg</a>
@@ -65,13 +64,6 @@
                 <span class="sr-only">stjerne</span> skal udfyldes.
               </p>
 
-              <ol class="progress" aria-label="Formularens tre dele">
-                <li><span>1</span> Konto</li>
-                <li><span>2</span> Profil</li>
-                <li><span>3</span> Præferencer</li>
-              </ol>
-            </header>
-
             <form id="account-form" action="#success" method="get">
               <fieldset class="form-section">
                 <legend>
@@ -85,7 +77,7 @@
                 <div class="fields-grid">
                   <div class="field">
                     <label for="full-name"
-                      >Navn <span aria-hidden="true">*</span></label
+                      >Navn * <span aria-hidden="true">*</span></label
                     >
                     <input
                       id="full-name"
@@ -105,7 +97,7 @@
 
                   <div class="field">
                     <label for="username"
-                      >Brugernavn <span aria-hidden="true">*</span></label
+                      >Brugernavn * <span aria-hidden="true">*</span></label
                     >
                     <input
                       id="username"
@@ -358,42 +350,8 @@
                     <legend>Vælg profilfarve</legend>
                     <div class="swatches">
                       <label class="swatch swatch-green">
-                        <input
-                          type="radio"
-                          name="profile-color"
-                          value="green"
-                          checked
-                        />
-                        <span class="sr-only">Grøn</span>
-                      </label>
-                      <label class="swatch swatch-orange">
-                        <input
-                          type="radio"
-                          name="profile-color"
-                          value="orange"
-                        />
-                        <span class="sr-only">Orange</span>
-                      </label>
-                      <label class="swatch swatch-purple">
-                        <input
-                          type="radio"
-                          name="profile-color"
-                          value="purple"
-                        />
-                        <span class="sr-only">Lilla</span>
-                      </label>
-                      <label class="swatch swatch-yellow">
-                        <input
-                          type="radio"
-                          name="profile-color"
-                          value="yellow"
-                        />
-                        <span class="sr-only">Gul</span>
-                      </label>
-                      <label class="swatch swatch-pink">
-                        <input type="radio" name="profile-color" value="pink" />
-                        <span class="sr-only">Pink</span>
-                      </label>
+                  <label for="color">Vælg en profilfarve</label>
+            <input type="color" id="color" name="color" value="#3B82F6" />
                     </div>
                   </fieldset>
                 </div>
