@@ -209,6 +209,81 @@ a {
   background: var(--green-600);
 }
 
+.nav-links-desktop {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Mobilmenuen er skjult på store skærme */
+.nav-menu {
+  display: none;
+  width: 100%;
+}
+
+.nav-menu summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-menu summary:hover {
+  background: var(--green-600);
+}
+
+.nav-menu summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: -3px;
+}
+
+/* Pil, der drejer rundt når menuen åbnes */
+.nav-menu-icon {
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  transition: transform 150ms ease;
+}
+
+.nav-menu[open] .nav-menu-icon {
+  transform: rotate(-135deg);
+}
+
+.nav-links-dropdown {
+  display: flex;
+  flex-direction: column;
+  background: var(--green-600);
+}
+
+.nav-links-dropdown a {
+  min-height: 46px;
+  padding: 0 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 0;
+  font-size: 14px;
+}
+
+.nav-links-dropdown a:hover,
+.nav-links-dropdown a.active {
+  background: var(--green-700);
+}
+
+.nav-links-dropdown a.active {
+  box-shadow: inset 4px 0 0 var(--focus);
+}
+
 .page-shell {
   width: min(780px, calc(100% - 32px));
   margin: 0 auto;
@@ -786,6 +861,19 @@ h1 {
   .file-input {
     flex-wrap: wrap;
     width: min(250px, 100%);
+  }
+
+    .main-nav {
+    padding-left: 0;
+    overflow: visible;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
   }
 }
 
