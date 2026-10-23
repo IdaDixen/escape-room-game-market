@@ -39,11 +39,14 @@
             <span>
               Ordblindevenlig tekst
               <small id="reading-mode-description"
-                >Skifter til en enklere skrifttype</small>
+                >Skifter til en enklere skrifttype</small
+              >
             </span>
           </label>
         </header>
         <nav class="main-nav" aria-label="Primær navigation">
+          <!-- Større skærme: links på en række -->
+          <div class="nav-links-desktop">
             <a href="index.html">Forside</a>
             <a href="buy.html">Køb brugte spil</a>
             <a href="sell.html">Sælg</a>
@@ -52,40 +55,26 @@
               >Opret profil</a
             >
             <a href="about.html">Om</a>
-          </nav>
-
-          <!--
-                <nav class="main-nav" aria-label="Primær navigation">
-                -->
-          <!-- Navigation til større skærme -->
-           <!--
-          <div class="nav-links nav-links-desktop">
-            <a href="/">Forside</a>
-            <a href="/buy.html">Køb brugte spil</a>
-            <a href="/sell.html">Sælg</a>
-            <a href="/trade.html">Byttecentralen</a>
-            <a class="active" href="/account-form.html" aria-current="page">Opret profil</a>
-            <a href="/about.html">Om</a>
           </div>
-          -->
 
-          <!-- Samme links i en dropdown på små skærme -->
-           <!--
-          <details class="nav-menu nav-menu-mobile">
-            <summary aria-label="Åbn eller luk navigation">
-              Menu <span aria-hidden="true">▾</span>
+          <!-- Mobil: dropdown-menu -->
+          <details class="nav-menu">
+            <summary>
+              <span>Menu</span>
+              <span class="nav-menu-icon" aria-hidden="true"></span>
             </summary>
-            <div class="nav-links nav-links-dropdown">
-              <a href="/">Forside</a>
-              <a href="/buy.html">Køb brugte spil</a>
-              <a href="/sell.html">Sælg</a>
-              <a href="/trade.html">Byttecentralen</a>
-              <a class="active" href="/account-form.html" aria-current="page">Opret profil</a>
-              <a href="/about.html">Om</a>
+            <div class="nav-links-dropdown">
+              <a href="index.html">Forside</a>
+              <a href="buy.html">Køb brugte spil</a>
+              <a href="sell.html">Sælg</a>
+              <a href="trade.html">Byttecentralen</a>
+              <a class="active" href="account-form.html" aria-current="page"
+                >Opret profil</a
+              >
+              <a href="about.html">Om</a>
             </div>
           </details>
         </nav>
-        -->
 
         <main class="page-shell">
           <section class="profile-card" aria-labelledby="page-title">
@@ -96,6 +85,7 @@
                 Felter markeret med <span aria-hidden="true">*</span>
                 <span class="sr-only">stjerne</span> skal udfyldes.
               </p>
+            </header>
 
             <form id="account-form" action="#success" method="get">
               <fieldset class="form-section">
@@ -227,7 +217,9 @@
 
                   <div class="fields-grid">
                     <div class="field field-wide">
-                      <label for="address">Adresse <span aria-hidden="true">*</span></label>
+                      <label for="address"
+                        >Adresse <span aria-hidden="true">*</span></label
+                      >
                       <input
                         id="address"
                         name="address"
@@ -239,7 +231,9 @@
                     </div>
 
                     <div class="field">
-                      <label for="phone">Telefonnummer <span aria-hidden="true">*</span></label>
+                      <label for="phone"
+                        >Telefonnummer <span aria-hidden="true">*</span></label
+                      >
                       <input
                         id="phone"
                         name="phone"
@@ -279,7 +273,9 @@
                     </div>
 
                     <div class="field">
-                      <label for="gender">Køn <span aria-hidden="true">*</span></label>
+                      <label for="gender"
+                        >Køn <span aria-hidden="true">*</span></label
+                      >
                       <select id="gender" name="gender">
                         <option value="">Vælg køn</option>
                         <option value="kvinde">Kvinde</option>
@@ -384,25 +380,26 @@
                     </div>
                   </div>
 
-                    <fieldset class="color-group">
-                     <legend>Vælg profilfarve</legend>
+                  <fieldset class="color-group">
+                    <legend>Vælg profilfarve</legend>
 
-                       <div class="color-picker-control">
-                       <input
-                         type="color"
-                          id="color"
-                          name="color"
-                         value="477B72"
-                         aria-describedby="color-help"
-                         />
+                    <div class="color-picker-control">
+                      <input
+                        type="color"
+                        id="color"
+                        name="color"
+                        value="477B72"
+                        aria-describedby="color-help"
+                      />
 
-                        <div class="color-picker-info">
+                      <div class="color-picker-info">
                         <label for="color">Din profilfarve</label>
-                          <small id="color-help">
-                            Vælg en farve, der repræsenterer dig, på din personlige profil.
-                          </small>
-                          </div>
-                       </div>
+                        <small id="color-help">
+                          Vælg en farve, der repræsenterer dig, på din
+                          personlige profil.
+                        </small>
+                      </div>
+                    </div>
                   </fieldset>
                 </div>
 
