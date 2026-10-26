@@ -1,289 +1,284 @@
 <!doctype html>
 <html lang="da">
   <head>
-    <!-- figma:head-start -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
-      name="description"
       content="Opret en tilgængelig bytteprofil på Escape Market."
+      name="description"
     />
     <title>Opret profil</title>
-    <link rel="stylesheet" href="account-form.css" />
-    <!-- figma:head-end -->
+    <link href="account-form.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- figma:body-start -->
     <div class="site-shell">
       <input
-        class="reading-mode-input"
-        type="checkbox"
-        id="reading-mode"
         aria-describedby="reading-mode-description"
+        class="reading-mode-input"
+        id="reading-mode"
+        type="checkbox"
       />
-
       <div class="site-content">
-        <a class="skip-link" href="/account-form.html">Gå til formularen</a>
-
+        <a class="skip-link" href="#account-form"> Gå til formularen </a>
         <header class="site-header">
           <div>
-            <a class="brand" href="#" aria-label="Escape Market forside">
-              <span class="brand-mark" aria-hidden="true">E</span>
-              <span>scape Market</span>
+            <a aria-label="Escape Market forside" class="brand" href="#">
+              <span aria-hidden="true" class="brand-mark"> E </span>
+              <span> scape Market </span>
             </a>
             <p>Markedsplads og byttecentral for escape room-spil</p>
           </div>
-
           <label class="reading-toggle" for="reading-mode">
-            <span class="toggle-track" aria-hidden="true"><span></span></span>
+            <span aria-hidden="true" class="toggle-track">
+              <span> </span>
+            </span>
             <span>
               Ordblindevenlig tekst
-              <small id="reading-mode-description"
-                >Skifter til en enklere skrifttype</small
-              >
+              <small id="reading-mode-description">
+                Skifter til en enklere skrifttype
+              </small>
             </span>
           </label>
         </header>
-        <nav class="main-nav" aria-label="Primær navigation">
+        <nav aria-label="Primær navigation" class="main-nav">
           <!-- Større skærme: links på en række -->
           <div class="nav-links-desktop">
-            <a href="index.html">Forside</a>
-            <a href="buy.html">Køb brugte spil</a>
-            <a href="sell.html">Sælg</a>
-            <a href="trade.html">Byttecentralen</a>
-            <a class="active" href="account-form.html" aria-current="page"
-              >Opret profil</a
-            >
-            <a href="about.html">Om</a>
+            <a href="index.html"> Forside </a>
+            <a href="buy.html"> Køb brugte spil </a>
+            <a href="sell.html"> Sælg </a>
+            <a href="trade.html"> Byttecentralen </a>
+            <a aria-current="page" class="active" href="account-form.html">
+              Opret profil
+            </a>
+            <a href="about.html"> Om </a>
           </div>
 
           <!-- Mobil: dropdown-menu -->
           <details class="nav-menu">
             <summary>
-              <span>Menu</span>
-              <span class="nav-menu-icon" aria-hidden="true"></span>
+              <span> Menu </span>
+              <span aria-hidden="true" class="nav-menu-icon"> </span>
             </summary>
             <div class="nav-links-dropdown">
-              <a href="index.html">Forside</a>
-              <a href="buy.html">Køb brugte spil</a>
-              <a href="sell.html">Sælg</a>
-              <a href="trade.html">Byttecentralen</a>
-              <a class="active" href="account-form.html" aria-current="page"
-                >Opret profil</a
-              >
-              <a href="about.html">Om</a>
+              <a href="index.html"> Forside </a>
+              <a href="buy.html"> Køb brugte spil </a>
+              <a href="sell.html"> Sælg </a>
+              <a href="trade.html"> Byttecentralen </a>
+              <a aria-current="page" class="active" href="account-form.html">
+                Opret profil
+              </a>
+              <a href="about.html"> Om </a>
             </div>
           </details>
         </nav>
-
         <main class="page-shell">
-          <section class="profile-card" aria-labelledby="page-title">
+          <section aria-labelledby="page-title" class="profile-card">
             <header class="hero">
               <p class="eyebrow">Velkommen til!</p>
               <h1 id="page-title">Opret din bytteprofil</h1>
               <p>
-                Felter markeret med <span aria-hidden="true">*</span>
-                <span class="sr-only">stjerne</span> skal udfyldes.
+                Felter markeret med
+                <span aria-hidden="true"> * </span>
+                <span class="sr-only"> stjerne </span>
+                skal udfyldes.
               </p>
             </header>
-
-            <form id="account-form" action="#success" method="get">
+            <form action="#success" id="account-form" method="get">
               <fieldset class="form-section">
                 <legend>
-                  <span aria-hidden="true">01</span>
+                  <span aria-hidden="true"> 01 </span>
                   <span>
                     Kontooplysninger
-                    <small>Dét bruger du til at logge ind.</small>
+                    <small> Det bruger du til at logge ind. </small>
                   </span>
                 </legend>
-
                 <div class="fields-grid">
                   <div class="field">
-                    <label for="full-name"
-                      >Navn <span aria-hidden="true">*</span></label
-                    >
+                    <label for="full-name">
+                      Navn
+                      <span aria-hidden="true"> * </span>
+                    </label>
                     <input
-                      id="full-name"
-                      name="full-name"
-                      type="text"
-                      autocomplete="name"
-                      minlength="2"
-                      required
-                      placeholder="Dit fulde navn"
                       aria-describedby="full-name-help full-name-error"
+                      autocomplete="name"
+                      id="full-name"
+                      minlength="2"
+                      name="full-name"
+                      placeholder="Dit fulde navn"
+                      required=""
+                      type="text"
                     />
-                    <small id="full-name-help">Skriv mindst 2 tegn.</small>
-                    <span class="field-feedback" id="full-name-error"
-                      >Indtast dit fulde navn.</span
-                    >
+                    <small id="full-name-help"> Skriv mindst 2 tegn. </small>
+                    <span class="field-feedback" id="full-name-error">
+                      Indtast dit fulde navn.
+                    </span>
                   </div>
-
                   <div class="field">
-                    <label for="username"
-                      >Brugernavn <span aria-hidden="true">*</span></label
-                    >
+                    <label for="username">
+                      Brugernavn
+                      <span aria-hidden="true"> * </span>
+                    </label>
                     <input
+                      aria-describedby="username-help username-error"
+                      autocomplete="username"
                       id="username"
                       name="username"
-                      type="text"
-                      autocomplete="username"
                       pattern="[A-Za-z0-9_-]{3,20}"
-                      required
                       placeholder="fx escapefan23"
-                      aria-describedby="username-help username-error"
+                      required=""
+                      type="text"
                     />
-                    <small id="username-help"
-                      >3–20 tegn. Brug bogstaver, tal, - eller _.</small
-                    >
-                    <span class="field-feedback" id="username-error"
-                      >Brugernavnet matcher ikke formatet.</span
-                    >
+                    <small id="username-help">
+                      3–20 tegn. Brug bogstaver, tal, - eller _.
+                    </small>
+                    <span class="field-feedback" id="username-error">
+                      Brugernavnet matcher ikke formatet.
+                    </span>
                   </div>
-
                   <div class="field">
-                    <label for="email"
-                      >E-mail <span aria-hidden="true">*</span></label
-                    >
+                    <label for="email">
+                      E-mail
+                      <span aria-hidden="true"> * </span>
+                    </label>
                     <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      inputmode="email"
-                      autocomplete="email"
-                      required
-                      placeholder="navn@eksempel.dk"
                       aria-describedby="email-help email-error"
+                      autocomplete="email"
+                      id="email"
+                      inputmode="email"
+                      name="email"
+                      placeholder="navn@eksempel.dk"
+                      required=""
+                      type="email"
                     />
-                    <small id="email-help"
-                      >Vi deler aldrig din e-mail offentligt.</small
-                    >
-                    <span class="field-feedback" id="email-error"
-                      >Indtast en gyldig e-mailadresse.</span
-                    >
+                    <small id="email-help">
+                      Vi deler aldrig din e-mail offentligt.
+                    </small>
+                    <span class="field-feedback" id="email-error">
+                      Indtast en gyldig e-mailadresse.
+                    </span>
                   </div>
-
                   <div class="field">
-                    <label for="password"
-                      >Adgangskode <span aria-hidden="true">*</span></label
-                    >
+                    <label for="password">
+                      Adgangskode
+                      <span aria-hidden="true"> * </span>
+                    </label>
                     <input
-                      id="password"
-                      name="password"
-                      type="password"
-                      autocomplete="new-password"
-                      minlength="8"
-                      pattern="(?=.*[a-zæøå])(?=.*[A-ZÆØÅ])(?=.*[0-9]).{8,}"
-                      required
                       aria-describedby="password-help password-error"
+                      autocomplete="new-password"
+                      id="password"
+                      minlength="8"
+                      name="password"
+                      pattern="(?=.*[a-zæøå])(?=.*[A-ZÆØÅ])(?=.*[0-9]).{8,}"
+                      required=""
+                      type="password"
                     />
-                    <small id="password-help"
-                      >Mindst 8 tegn med stort bogstav, lille bogstav og
-                      tal.</small
-                    >
-                    <span class="field-feedback" id="password-error"
-                      >Adgangskoden opfylder ikke kravene.</span
-                    >
+                    <small id="password-help">
+                      Mindst 8 tegn med stort bogstav, lille bogstav og tal.
+                    </small>
+                    <span class="field-feedback" id="password-error">
+                      Adgangskoden opfylder ikke kravene.
+                    </span>
                   </div>
                 </div>
               </fieldset>
-
               <fieldset class="form-section">
                 <legend>
-                  <span aria-hidden="true">02</span>
+                  <span aria-hidden="true"> 02 </span>
                   <span>
                     Om dig
-                    <small>Oplysninger til din offentlige profil.</small>
+                    <small> Oplysninger til din offentlige profil. </small>
                   </span>
                 </legend>
-
                 <div class="identity-layout">
                   <div class="photo-field">
-                    <label for="profile-image">Profilbillede</label>
+                    <label for="profile-image"> Profilbillede </label>
                     <label class="photo-upload" for="profile-image">
-                      <span class="upload-icon" aria-hidden="true">↑</span>
-                      <strong>Vælg billede</strong>
-                      <small>JPG eller PNG</small>
+                      <span aria-hidden="true" class="upload-icon"> ↑ </span>
+                      <strong> Vælg billede </strong>
+                      <small> JPG eller PNG </small>
                     </label>
                     <input
+                      accept="image/png,image/jpeg"
+                      aria-describedby="image-help"
                       class="file-input"
                       id="profile-image"
                       name="profile-image"
                       type="file"
-                      accept="image/png,image/jpeg"
-                      aria-describedby="image-help"
                     />
-                    <small id="image-help">Maks. 5 MB.</small>
+                    <small id="image-help"> Maks. 5 MB. </small>
                   </div>
-
                   <div class="fields-grid">
                     <div class="field field-wide">
-                      <label for="address"
-                        >Adresse <span aria-hidden="true">*</span></label
-                      >
+                      <label for="address">
+                        Adresse
+                        <span aria-hidden="true"> * </span>
+                      </label>
                       <input
+                        aria-describedby="address-help"
+                        autocomplete="street-address"
                         id="address"
                         name="address"
-                        type="text"
-                        required
-                        autocomplete="street-address"
                         placeholder="Vejnavn, nummer og by"
+                        required=""
+                        type="text"
                       />
-                      <small id="adress-help"
-                        >Din adresse bruges til lokations bestemmelse og vises
-                        kun, ifm. en byttehandel.</small
-                      >
+                      <small id="address-help">
+                        Din adresse bruges til at finde din placering og vises
+                        kun i forbindelse med en byttehandel.
+                      </small>
                     </div>
-
                     <div class="field">
-                      <label for="phone"
-                        >Telefonnummer <span aria-hidden="true">*</span></label
-                      >
+                      <label for="phone">
+                        Telefonnummer
+                        <span aria-hidden="true"> * </span>
+                      </label>
                       <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        inputmode="tel"
+                        aria-describedby="phone-help phone-error"
                         autocomplete="tel"
+                        id="phone"
+                        inputmode="tel"
+                        name="phone"
                         pattern="[+0-9 ()-]{8,20}"
                         placeholder="+45 12 34 56 78"
-                        aria-describedby="phone-error"
+                        required=""
+                        type="tel"
                       />
-                      <small id="phone-help"
-                        >Er kun tilgængelig for andre ifm. en byttehandel</small
-                      >
-                      <span class="field-feedback" id="phone-error"
-                        >Kontrollér telefonnummeret.</span
-                      >
+                      <small id="phone-help">
+                        Kun tilgængelig for andre i forbindelse med en
+                        byttehandel
+                      </small>
+                      <span class="field-feedback" id="phone-error">
+                        Kontrollér telefonnummeret.
+                      </span>
                     </div>
-
                     <div class="field">
-                      <label for="birthdate"
-                        >Fødselsdato <span aria-hidden="true">*</span></label
-                      >
+                      <label for="birthdate">
+                        Fødselsdato
+                        <span aria-hidden="true"> * </span>
+                      </label>
                       <input
-                        id="birthdate"
-                        name="birthdate"
-                        type="date"
-                        autocomplete="bday"
-                        min="1900-01-01"
-                        max="2008-12-31"
-                        required
                         aria-describedby="birthdate-help birthdate-error"
+                        autocomplete="bday"
+                        id="birthdate"
+                        max="2008-12-31"
+                        min="1900-01-01"
+                        name="birthdate"
+                        required=""
+                        type="date"
                       />
-                      <small id="birthdate-help"
-                        >Du skal være mindst 18 år for at bytte.</small
-                      >
-                      <span class="field-feedback" id="birthdate-error"
-                        >Vælg en gyldig fødselsdato.</span
-                      >
+                      <small id="birthdate-help">
+                        Du skal være mindst 18 år for at bytte.
+                      </small>
+                      <span class="field-feedback" id="birthdate-error">
+                        Vælg en gyldig fødselsdato.
+                      </span>
                     </div>
-
                     <div class="field">
-                      <label for="gender"
-                        >Køn <span aria-hidden="true">*</span></label
-                      >
-                      <select id="gender" name="gender">
+                      <label for="gender">
+                        Køn
+                        <span aria-hidden="true"> * </span>
+                      </label>
+                      <select id="gender" name="gender" required="">
                         <option value="">Vælg køn</option>
                         <option value="kvinde">Kvinde</option>
                         <option value="mand">Mand</option>
@@ -293,12 +288,12 @@
                         </option>
                       </select>
                     </div>
-
                     <div class="field">
-                      <label for="language"
-                        >Sprog <span aria-hidden="true">*</span></label
-                      >
-                      <select id="language" name="language" required>
+                      <label for="language">
+                        Sprog
+                        <span aria-hidden="true"> * </span>
+                      </label>
+                      <select id="language" name="language" required="">
                         <option value="">Vælg sprog</option>
                         <option value="da">Dansk</option>
                         <option value="en">Engelsk</option>
@@ -307,100 +302,96 @@
                         <option value="no">Norsk</option>
                       </select>
                     </div>
-
                     <div class="field field-wide">
-                      <label for="profile-text">Profiltekst</label>
+                      <label for="profile-text"> Profiltekst </label>
                       <textarea
-                        id="profile-text"
-                        name="profile-text"
-                        rows="5"
-                        maxlength="500"
-                        placeholder="Fortæl lidt om dig selv, og hvilke spil du holder af..."
                         aria-describedby="profile-text-help"
+                        id="profile-text"
+                        maxlength="500"
+                        name="profile-text"
+                        placeholder="Fortæl lidt om dig selv, og hvilke spil du holder af..."
+                        rows="5"
                       ></textarea>
-                      <small id="profile-text-help">Maks. 500 tegn.</small>
+                      <small id="profile-text-help"> Maks. 500 tegn. </small>
                     </div>
                   </div>
                 </div>
               </fieldset>
-
               <fieldset class="form-section">
                 <legend>
-                  <span aria-hidden="true">03</span>
+                  <span aria-hidden="true"> 03 </span>
                   <span>
                     Profilpræferencer
-                    <small>Hjælp os med at finde relevante spil til dig.</small>
+                    <small>
+                      Hjælp os med at finde relevante spil til dig.
+                    </small>
                   </span>
                 </legend>
-
                 <fieldset class="choice-group">
                   <legend>
-                    Hvor ofte spiller du? <span aria-hidden="true">*</span>
+                    Hvor ofte spiller du?
+                    <span aria-hidden="true"> * </span>
                   </legend>
                   <div class="radio-row">
                     <label class="choice-card">
                       <input
-                        type="radio"
                         name="frequency"
+                        required=""
+                        type="radio"
                         value="yearly"
-                        required
                       />
-                      <span>Et par gange om året</span>
+                      <span> Et par gange om året </span>
                     </label>
                     <label class="choice-card">
-                      <input type="radio" name="frequency" value="monthly" />
-                      <span>1–2 gange om måneden</span>
+                      <input name="frequency" type="radio" value="monthly" />
+                      <span> 1–2 gange om måneden </span>
                     </label>
                     <label class="choice-card">
-                      <input type="radio" name="frequency" value="weekly" />
-                      <span>Hver uge</span>
+                      <input name="frequency" type="radio" value="weekly" />
+                      <span> Hver uge </span>
                     </label>
                   </div>
                 </fieldset>
-
                 <div class="preference-row">
                   <div class="range-group">
-                    <label for="radius">Søgeradius</label>
+                    <label for="radius"> Søgeradius </label>
                     <p id="radius-help">
                       Hvor langt vil du rejse for at bytte spil?
                     </p>
                     <input
-                      id="radius"
-                      name="radius"
-                      type="range"
-                      min="5"
-                      max="100"
-                      step="5"
-                      value="25"
                       aria-describedby="radius-help radius-scale"
+                      id="radius"
+                      max="100"
+                      min="5"
+                      name="radius"
+                      step="5"
+                      type="range"
+                      value="25"
                     />
                     <div
+                      aria-hidden="true"
                       class="range-labels"
                       id="radius-scale"
-                      aria-hidden="true"
                     >
-                      <span>5 km</span>
-                      <span>25 km</span>
-                      <span>50 km</span>
-                      <span>75 km</span>
-                      <span>100 km</span>
+                      <span> 5 km </span>
+                      <span> 25 km </span>
+                      <span> 50 km </span>
+                      <span> 75 km </span>
+                      <span> 100 km </span>
                     </div>
                   </div>
-
                   <fieldset class="color-group">
                     <legend>Vælg profilfarve</legend>
-
                     <div class="color-picker-control">
                       <input
-                        type="color"
+                        aria-describedby="color-help"
                         id="color"
                         name="color"
-                        value="477B72"
-                        aria-describedby="color-help"
+                        type="color"
+                        value="#477b72"
                       />
-
                       <div class="color-picker-info">
-                        <label for="color">Din profilfarve</label>
+                        <label for="color"> Din profilfarve </label>
                         <small id="color-help">
                           Vælg en farve, der repræsenterer dig, på din
                           personlige profil.
@@ -409,38 +400,39 @@
                     </div>
                   </fieldset>
                 </div>
-
                 <div class="check-options">
                   <label class="check-option">
-                    <input type="checkbox" name="newsletter" />
-                    <span>Send mig tips og nyheder fra Escape Market.</span>
+                    <input name="newsletter" type="checkbox" />
+                    <span> Send mig tips og nyheder fra Escape Market. </span>
                   </label>
                   <label class="check-option">
-                    <input type="checkbox" name="terms" required />
+                    <input name="terms" required="" type="checkbox" />
                     <span>
-                      Jeg accepterer <a href="#vilkaar">vilkårene</a> og
-                      <a href="#privatliv">privatlivspolitikken</a>.
-                      <span aria-hidden="true">*</span>
+                      Jeg accepterer
+                      <a href="#vilkaar"> vilkårene </a>
+                      og
+                      <a href="#privatliv"> privatlivspolitikken </a>
+                      .
+                      <span aria-hidden="true"> * </span>
                     </span>
                   </label>
                 </div>
               </fieldset>
-
               <footer class="form-footer">
                 <p>Kontrollér dine oplysninger, før du opretter profilen.</p>
                 <button type="submit">
-                  Opret min profil <span aria-hidden="true">→</span>
+                  Opret min profil
+                  <span aria-hidden="true"> → </span>
                 </button>
               </footer>
             </form>
-
             <section
+              aria-labelledby="success-title"
               class="success-message"
               id="success"
               tabindex="-1"
-              aria-labelledby="success-title"
             >
-              <span aria-hidden="true">✓</span>
+              <span aria-hidden="true"> ✓ </span>
               <div>
                 <h2 id="success-title">Tak – formularen er udfyldt</h2>
                 <p>
@@ -451,10 +443,8 @@
             </section>
           </section>
         </main>
-
         <footer class="site-footer">© 2025 Escape Market</footer>
       </div>
     </div>
-    <!-- figma:body-end -->
   </body>
 </html>
