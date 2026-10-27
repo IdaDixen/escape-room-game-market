@@ -7,19 +7,44 @@
     <title>Escape Market</title>
 </head>
 <body>
+    <div class="site-shell">
+    <input aria-describedby="reading-mode-description" class="reading-mode-input" id="reading-mode" type="checkbox">
+    <div class="site-content">
 
-    <header> 
-        <h1>Escape Market</h1>
-        <p>Unlock new adventures! Køb, sælg eller byt brugte escape room spil.</p>
-        <nav class="navigation">
-            <a href="index.html">Forside</a>
+    <header class="site-header">
+        <div>
+            <a aria-label="Escape Market forside" class="brand" href="index.html">
+                <span aria-hidden="true" class="brand-mark"> E </span>
+                <span> scape Market </span>
+            </a>
+            <p>Markedsplads og byttecentral for escape room-spil</p>
+        </div>
+        <label class="reading-toggle" for="reading-mode">
+            <span aria-hidden="true" class="toggle-track"><span></span></span>
+            <span>Ordblindevenlig tekst<small>Skifter til en enklere skrifttype</small></span>
+        </label>
+    </header>
+    <nav aria-label="Primær navigation" class="main-nav">
+        <div class="nav-links-desktop">
+            <a class="active" href="index.html">Forside</a>
             <a href="buy.html">Køb brugte spil</a>
             <a href="sell.html">Sælg</a>
             <a href="trade.html">Byttecentralen</a>
             <a href="account-form.html">Opret profil</a>
             <a href="about.html">Om</a>
-        </nav>
-    </header>
+        </div>
+        <details class="nav-menu">
+            <summary><span>Menu</span><span aria-hidden="true" class="nav-menu-icon"></span></summary>
+            <div class="nav-links-dropdown">
+                <a class="active" href="index.html">Forside</a>
+                <a href="buy.html">Køb brugte spil</a>
+                <a href="sell.html">Sælg</a>
+                <a href="trade.html">Byttecentralen</a>
+                <a href="account-form.html">Opret profil</a>
+                <a href="about.html">Om</a>
+            </div>
+        </details>
+    </nav>
 
     <main>
         <h2 id="used-games">Velkommen til! Hvad ønsker du nu?</h2>
@@ -50,9 +75,9 @@
         
     </main>
     
-    <footer>
-        <p>© 2026 Escape Market</p>
-    </footer>
+    <footer class="site-footer">© 2025 Escape Market</footer>
+    </div>
+    </div>
 
 </body>
 
